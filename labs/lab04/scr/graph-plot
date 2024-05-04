@@ -1,0 +1,56 @@
+#!/usr/bin/gnuplot -persist
+# задаём текстовую кодировку, 
+# тип терминала, тип и размер шрифта
+
+set encoding utf8
+set term pdfcairo font "Arial,9"
+
+# задаём выходной файл графика
+set out 'qm.pdf'
+
+# задаём название графика
+set title "Изменение размера окна ТСР на линке 1-го источника при N=20" 
+
+# задаём стиль линии
+set style line 3
+# подписи осей графика
+set xlabel "t[s]"
+set ylabel "CWND [pkt]"
+
+# построение графика, используя значения 
+# 1-го и 5-го столбцов файла qm. out
+plot "Window2B" using ($1):($2) with lines title "Размер окна ТСР"
+set out 'A&Q.pdf'
+set title "Изменение размера окна ТСР на всех источниках при N=20"
+plot "Window1A" using ($1): ($2) with lines title "Размер окна ТСР"
+
+set out 'Current Queue.pdf'
+
+set title "Изменение размера длины очереди на линке (R1-R2)"
+
+set xlabel "t[s]"
+set ylabel "Queue Length [pkt]"
+plot "CurrentQueue" using ($1): ($2) with lines title "Текущая длина очереди"
+
+set out 'Avrage Queue.pdf
+
+set out 'A&Q.pdf'
+
+set title "Изменение размера окна ТСР на всех источниках при N=20"
+plot "Window1A" using ($1): ($2) with lines title "Размер окна ТСР" 
+
+set out 'CurrQueue.pdf'
+
+set title "Изменение размера длины очереди на линке (R1-R2)"
+
+set xlabel "t[s]"
+set ylabel "Queue Length [pkt]"
+plot "CurrentQueue" using ($1): ($2) with lines title "Текущая длина очереди"
+
+set out 'Avrage Queue.pdf'
+
+set title "Изменение размера средней длины очереди на линке (R1-R2)"
+
+set xlabel "t[s]"
+set ylabel "Queue Length [pkt]"
+plot "AvrageQueue" using ($1): ($2) with lines title "Средняя длина очереди"

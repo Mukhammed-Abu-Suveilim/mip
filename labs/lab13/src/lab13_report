@@ -1,0 +1,78 @@
+CPN Tools state space report for:
+/home/openmodelica/mip/lab-cpn-13/lab13.cpn
+Report generated: Sat Jun  1 01:59:27 2024
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  5
+     Arcs:   10
+     Secs:   0
+     Status: Full
+
+  Scc Graph
+     Nodes:  1
+     Arcs:   0
+     Secs:   0
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Main'P1 1               1          1
+     Main'P2 1               1          0
+     Main'P3 1               1          0
+     Main'P4 1               1          0
+     Main'P5 1               1          0
+     Main'P6 1               1          0
+
+  Best Upper Multi-set Bounds
+     Main'P1 1           1`ram
+     Main'P2 1           1`D1
+     Main'P3 1           1`D2
+     Main'P4 1           1`D1
+     Main'P5 1           1`D2
+     Main'P6 1           1`(D1,D2)
+
+  Best Lower Multi-set Bounds
+     Main'P1 1           1`ram
+     Main'P2 1           empty
+     Main'P3 1           empty
+     Main'P4 1           empty
+     Main'P5 1           empty
+     Main'P6 1           empty
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     All
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     None
+
+  Dead Transition Instances
+     None
+
+  Live Transition Instances
+     All
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+       Main'T1 1              No Fairness
+       Main'T2 1              No Fairness
+       Main'T3 1              No Fairness
+       Main'T4 1              No Fairness
+       Main'T5 1              Just
+       Main'T6 1              Fair
+
